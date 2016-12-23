@@ -1,0 +1,7 @@
+1. /Images changed to /images
+2. In index.html added 3 scripts: ui-bootstrap, animate and touch
+3. Added them in var app in app.js
+4. Changed some divs names in home.html - see commented out top section as reference
+5. In HomeController.js changed $scope.setInterval to ...myInterval > other way reference in home.html may be changed to ...setInterval i think...
+
+I think this touch is resposible for swiping pics in sellphones...
