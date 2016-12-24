@@ -1,17 +1,17 @@
-
+<div ng-controller="AboutController">
 <h3 ng-model="memberTitle">{{memberTitle}}</h3>
 	<div class="col-sm-3">
 		<div id="imgWrapper">
 			<ul id=imgList>
 				<li ng-repeat="member in members">
-					<img class="img-thumbnail" ng-src="{{member.image}}" alt="member.name">
+					<img class="img-thumbnail" ng-src="{{members.image}}" alt="members.name">
 				</li>				
 			</ul>
-			<h4 class="photo-title"><strong>{{member.name}}</strong></h4>
-		    <p class="desc">{{ member.description}}</p>
+			<h4 class="imgTitle"><strong>{{members.name}}</strong></h4>
+		    <p class="desc">{{members.description}}</p>
 		</div>
 	</div>
-
+</div>
 
 <!--<div ng-controller="AboutController">	
 	<h3 ng-model="memberTitle">{{memberTitle}}</h3>
@@ -19,7 +19,7 @@
     <div class="container">
       <img ng-src="{{members.img}}">
       <h4 class="photo-title"><strong> {{members.name}}</strong></h4>
-      <p class="member-details"> by {{ member.details}} </p>
+      <p class="member-description"> by {{ member.description}} </p>
     </div>
   </div>
 </div>-->
