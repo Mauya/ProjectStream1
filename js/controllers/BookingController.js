@@ -1,4 +1,4 @@
-app.controller('BookingController', function($scope){
+app.controller('BookingController', ['$scope', function($scope){
   $scope.bookigTitle='For Special Events Make a Booking Here!';
   $scope.booking.name = 'Name';
   $scope.booking.email = 'Email';
@@ -9,4 +9,4 @@ app.controller('BookingController', function($scope){
   $scope.submitForm = function () {
     console.info("Here I should implement the logic to send a request to the server.");
   }
-});
+}]);

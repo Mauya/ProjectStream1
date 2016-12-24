@@ -9,11 +9,11 @@
     </div>
   </div>
 </div> -->
-
+<h1 ng-model="title">{{title}}</h1>
 <div style="height: 500px">
   <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
     <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-      <img ng-src="{{slide.image}}" style="margin:auto;">
+      <img ng-src="{{slide.image}}" style=" width:300px height:200px margin:auto;">
       <div class="carousel-caption">
         <h4>Slide {{slide.id}}</h4>
         <p>{{slide.caption}}</p>

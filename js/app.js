@@ -1,4 +1,9 @@
-var app = angular.module('bandApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.bootstrap']);
+var app = angular.module('bandApp',
+ ['ngRoute', 
+ 'ngAnimate', 
+ 'ngTouch', 
+ 'ui.bootstrap'
+ ]);
 
 app.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', {

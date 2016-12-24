@@ -1,5 +1,5 @@
 app.controller('AboutController', ['$scope', function($scope){
-    $scope.memberTitle= "The Band Members and Achivements";
+    $scope.memberTitle= "The Biography of Band Members";
     $scope.members=[
     {
       "name":"member one",
@@ -31,4 +31,4 @@ app.controller('AboutController', ['$scope', function($scope){
       "description":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
     }  
     ];
-
+  }]);
