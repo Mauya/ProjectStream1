@@ -1,3 +1,4 @@
+angular.module('RouteControllers', [])
 app.controller('AboutController', ['$scope', function($scope){
     $scope.memberTitle= "The Biography of Band Members";
     $scope.members=[
