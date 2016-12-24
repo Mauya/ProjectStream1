@@ -1,5 +1,6 @@
+angular.module('RouteControllers', [])
 app.controller('BookingController', ['$scope', function($scope){
-  $scope.bookigTitle='For Special Events Make a Booking Here!';
+  $scope.bookingTitle='For Special Events Make a Booking Here!';
   $scope.booking.name = 'Name';
   $scope.booking.email = 'Email';
   $scope.booking.phone = 'phone';
