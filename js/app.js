@@ -1,5 +1,6 @@
 var app = angular.module('bandApp',
- ['ngRoute', 
+ ['ngRoute',
+ 'RouteControllers', 
  'ngAnimate', 
  'ngTouch', 
  'ui.bootstrap'

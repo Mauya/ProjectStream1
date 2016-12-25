@@ -1,0 +1,42 @@
+ <h3>Contact Us</h3>  
+    <div ng-model>
+      Address:{{contact.address}}
+    </div>
+    <div ng-model>
+      Email:{{contact.email}}
+    </div>
+    <div ng-model>
+      Telephone:{{contact.telephone}}
+    </div>
+  <div class="form-area">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <input name="name" ng-model="contact.name" id="FullName" type="text" ng-required="true" ng-pattern="name" autocomplete="off" placeholder="Full name" class="form-control">            
+          <span class="red-text" ng-if="inquiryForm.name.$error.required && inquiryForm.name.$dirty">Full name is a required field</span>
+          <span class="red-text" ng-show="inquiryForm.contact.$error.pattern">Please enter First Name and Last Name</span>      
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <input name="email" ng-model="contact.email" id="email" type="text" ng-pattern="eml_add" ng-required="true" autocomplete="off" placeholder="Email" class="form-control" >            
+        <span class="red-text" ng-if="inquiryForm.email.$error.required && inquiryForm.email.$dirty">Email address is a required</span> 
+        <span class="red-text" ng-show="inquiryForm.email.$error.pattern">Invalid Email</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <textarea name="massage" ng-model="contac.message" id="email" type="text" ng-required="true" autocomplete="off" placeholder="message"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">                     
+    <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" ng-disabled="inquiryForm.$invalid">Submit Form</button>    
+  </div>   
+</div>  
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
