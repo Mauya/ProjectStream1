@@ -64,24 +64,12 @@ h2 {
   padding-left: 10px;
 }
 
-.albumImage img { margin-bottom: 7px; }
-
-.wrapper {
-  }
-  .list {
-    list-style: none;
-    display:inline-block;
-    height: 100%;
-    margin-left: 90px;
-    overflow-y: auto;
-  }
-  
-  img {
-    width: 140px;
+ uib-slide img {
     margin-bottom: 15px;
     cursor: pointer;
     display: block;
     border: 2px solid #fff;
+    position:absolute;
     }
 
     :hover {
