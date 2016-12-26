@@ -1,5 +1,10 @@
 angular.module('RouteControllers', [])
-app.controller('AboutController', ['$scope', function($scope){
+app.controller('AboutController', ['$scope', '$route', function($scope, $route){
+  var vm =this;
+    vm.reloadData=function(){
+      $route.reload();
+    }
+    
     $scope.memberTitle= "The Biography of Band Members";
     $scope.members=[
     {
