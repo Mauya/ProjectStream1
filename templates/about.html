@@ -3,11 +3,11 @@
 		<div id="imgWrapper">
 			<ul id=imgList>
 				<li ng-repeat="member in members">
-					<img class="img-thumbnail" ng-src="{{members.image}}" alt="members.name"/>
+					ng-src="{{member.image}}"
 				</li>				
 			</ul><br />
-			<h4 class="imgTitle"><strong>{{members.name}}</strong></h4><br />
-		    <p class="desc">{{members.description}}</p>
+			<h4 class="imgTitle" ng-model="member.name"><strong>{{member.name}}</strong></h4><br />
+		    <p class="desc" ng-model="member.description">{{members.description}}</p>
 		</div>
 	</div>
 
