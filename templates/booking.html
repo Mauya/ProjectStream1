@@ -1,6 +1,6 @@
-<h3 ng-model="bookingTitle">{{bookingTitle}}</h3>
+<h3 ng-model="booking.Title">{{booking.Title}}</h3>
 <div class="booking-form container">
-  <form class="form-group" name= "bookingform" id="bookingform" method="post" novalidate="novalidate" ng-submit="bookingform.$valid && handleFormSubmit(booking)">
+  <form class="form-group" name="bookingform" id="bookingform" method="post" novalidate="novalidate" ng-submit="bookingform.$valid && handleFormSubmit(booking)">
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
@@ -55,14 +55,13 @@
     <div class="col-sm-6">
       <div class="form-group">
         <label for="message">Message: </label>
-        <textarea name="message" id="message" ng-model="booking-message" cols="30" rows="5" placeholder="Event type, event address, duration requirements, other specific information"></textarea>
+        <textarea name="message" id="message" ng-model="booking.message" cols="30" rows="5" placeholder="Event type, event address, duration requirements, other specific information"></textarea>
       </div>
     </div>
   </div>
     <div class="form-group">
       <button type="submit" value="Submit" ng-disabled="bookingform.$invalid" class="btn btn-default">Make a Booking</button>
     </div>
-  </div>
   </form>  
 <div ng-show="message">
   <p>Form submitted succesfully! Thank you for contacting us. We aim to respond to all enquiries within 24hrs. </p>
