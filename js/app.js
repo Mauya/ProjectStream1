@@ -3,7 +3,13 @@ var app = angular.module('bandApp',
  'RouteControllers', 
  'ngAnimate', 
  'ngTouch', 
- 'ui.bootstrap'
+ 'ui.bootstrap',
+ 'ngGallery',
+ 'ngSanitize',
+ 'com.2fdevs.videogular',
+ 'com.2fdevs.videogular.plugins.controls',
+ 'com.2fdevs.videogular.plugins.overlayplay',
+ 'com.2fdevs.videogular.plugins.poster'
  ]);
 
 app.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
@@ -31,11 +37,11 @@ app.config(['$routeProvider','$locationProvider', function ($routeProvider, $loc
         templateUrl: 'templates/music.html',
         controller: 'MusicController'
     })
-    .when('/videos', {
+    .when('/video', {
         templateUrl: 'templates/video.html',
         controller: 'VideoController'
     })
-    .when('/photos', {
+    .when('/photo', {
         templateUrl: 'templates/photo.html',
         controller: 'PhotoController'
     })    
