@@ -9,7 +9,7 @@ angular.module('bandApp').service("audioService", function (audiofactory) {
 		{
 			Audio:"music/minion-xmas.make4fun.com.24eb4.mp3"
 		}
-		}];
+		];
 		//set source of the audio player to the current track.
 	currentIndex: 0,
 	     
