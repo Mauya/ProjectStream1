@@ -5,7 +5,7 @@ angular.module('bandApp').directive('audioPlayer', function(audioService) {
         scope: {},
         templateUrl: 'templates/music.html',
         link: function (scope, element, attrs) {
-        	scope.myAudioPlayer = audioService;
+        	scope.myAudioService = audioService;
       }
     };
 });

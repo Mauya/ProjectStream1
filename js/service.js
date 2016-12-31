@@ -1,5 +1,8 @@
-//service enable our player to play. service return and object.
-angular.module('bandApp').service("audioService", function (audiofactory) {
+myApp.service("audioService", function () {
+ 
+});
+//service enable our player to play.
+angular.module("bandApp").service("audioService", function (AudioFactory) {
 	var audioPlayer = {
 		isPaused: true,
 		//few sample tracks, these are to be replaced by band music files.
@@ -9,13 +12,13 @@ angular.module('bandApp').service("audioService", function (audiofactory) {
 		{
 			Audio:"music/minion-xmas.make4fun.com.24eb4.mp3"
 		}
-		]
+		],
 		//set source of the audio player to the current track.
 	currentIndex: 0,
 	     
 	    play: function () {
 	       audioPlayer.isPaused = false;
-	       AudioFactory.src = myPlayer.trackList[myPlayer.currentIndex];
+	       AudioFactory.src = audioPlayer.audioList[myPlayer.currentIndex];
 	       AudioFactory.play();
 	    },
 	     
