@@ -5,11 +5,9 @@ bandApp.service("audioService", function (audiofactory) {
 		//few sample tracks, these are to be replaced by band music files.
 		audioList: [{
 			Audio:"music/26886.mp3",
-			id: 0
 		},
 		{
 			Audio:"music/minion-xmas.make4fun.com.24eb4.mp3"
-			id: 1
 		}
 		}];
 		//set source of the audio player to the current track.

@@ -1,6 +1,5 @@
  angular.module('RouteControllers', [])
  app.controller("GalleryController", function($Scope){
-
     var media = [
     {
     title:"Media",
@@ -20,7 +19,7 @@ app.controller('MusicController', ['$scope', 'audioService', function($scope, au
     }
 }])
 
-.controller('VideoController',
+app.controller('VideoController',
     ["$sce", function ($sce) {
       this.config = {
         sources: [
@@ -43,4 +42,11 @@ app.controller('MusicController', ['$scope', 'audioService', function($scope, au
         }
       };
     }]
-  );
+  )
+app.controller('PhotoController', function($scope, $document) {
+    var self = this;
+    self.images = [
+      {image: 'images/photo1.jpg'},
+      {image: 'images/photo2.jpg'}
+    ];
+  });
