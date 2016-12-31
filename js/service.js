@@ -1,5 +1,5 @@
 //service enable our player to play. service return and object.
-bandApp.service("audioService", function (audiofactory) {
+angular.module('bandApp').service("audioService", function (audiofactory) {
 	var audioPlayer = {
 		isPaused: true,
 		//few sample tracks, these are to be replaced by band music files.
