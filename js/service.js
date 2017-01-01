@@ -1,6 +1,6 @@
-app.service("audioService", function () {
- 
-});
+app.service('audioService', function(){
+	
+})
 //service enable our player to play.
 angular.module("bandApp").service("audioService", function (AudioFactory) {
 	var audioPlayer = {
