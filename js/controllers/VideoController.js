@@ -1,4 +1,3 @@
-"use strict"
 angular.module('RouteControllers', [])
 app.controller('VideoController',
     ["$sce", function ($sce) {

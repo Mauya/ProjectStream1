@@ -1,4 +1,4 @@
-myApp.service("audioService", function () {
+app.service("audioService", function () {
  
 });
 //service enable our player to play.
