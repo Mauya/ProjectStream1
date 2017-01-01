@@ -30,6 +30,7 @@
     "angular-animate": "^1.6.0",
     "angular-bootstrap": "^2.3.1",
     "videogular": "^1.4.4",
-    "videogular-themes-default": "^1.4.4"
+    "videogular-themes-default": "^1.4.4",
+    "angular-media-player": "^0.5.8"
   }
 }
