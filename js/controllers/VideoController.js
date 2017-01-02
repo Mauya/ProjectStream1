@@ -1,4 +1,4 @@
-angular.module('RouteControllers', [])
+/*angular.module('RouteControllers', [])
 app.controller('VideoController',
     ["$sce", function ($sce) {
       this.config = {
@@ -22,4 +22,4 @@ app.controller('VideoController',
         }
       };
     }]
-  );
+  );*/

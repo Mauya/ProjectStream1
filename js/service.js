@@ -1,9 +1,9 @@
-app.service('audioService', function(){
+/*app.service('audioService', function(){
 
 })
 //service enable our player to play.
 angular.module("bandApp").service("audioService", function (AudioFactory) {
-	var audioPlayer = {
+	var mediaPlayer = {
 		isPaused: true,
 		//few sample tracks, these are to be replaced by band music files.
 		audioList: [{
@@ -17,14 +17,14 @@ angular.module("bandApp").service("audioService", function (AudioFactory) {
 	currentIndex: 0,
 	     
 	    play: function () {
-	       audioPlayer.isPaused = false;
-	       AudioFactory.src = audioPlayer.audioList[myPlayer.currentIndex];
+	       mediaPlayer.isPaused = false;
+	       AudioFactory.src = mediaPlayer.audioList[mediaPlayer.currentIndex];
 	       AudioFactory.play();
 	    },
 	     
 	    pause: function () {
-	        audioPlayer.isPaused = !audioPlayer.isPaused;
-	        if (audioPlayer.isPaused) {
+	        mediaPlayer.isPaused = !mediaPlayer.isPaused;
+	        if (mediaPlayer.isPaused) {
 	            AudioFactory.pause();
 	        } else {
 	            AudioFactory.play();
@@ -32,25 +32,25 @@ angular.module("bandApp").service("audioService", function (AudioFactory) {
 	    },
 
 	    previous: function () {
-            if (audioPlayer.currentIndex > 0) {
-                audioPlayer.currentIndex--;
-                audioPlayer.play();
+            if (mediaPlayer.currentIndex > 0) {
+                mediaPlayer.currentIndex--;
+                mediaPlayer.play();
             }
           },
  
 		next: function () {
-            if (audioPlayer.currentIndex < audioPlayer.audioList.length) {
-                audioPlayer.currentIndex++;
-                audioPlayer.play();
+            if (mediaPlayer.currentIndex < mediaPlayer.audioList.length) {
+                mediaPlayer.currentIndex++;
+                mediaPlayer.play();
             }
           }
 	  };
 	   
-	  return audioPlayer;
+	  return mediaPlayer;
 	});
 
 angular.module('bandApp').factory('AudioFactory', function($document) {
   var audio = $document[0].createElement('audio');
   return audio;
-});
+});*/
 
