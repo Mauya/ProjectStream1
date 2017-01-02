@@ -25,10 +25,16 @@
         <span class="glyphicon glyphicon-pause" ng-click="myAudioPlayer.pause()"></span>
     </a>
     <a>
-        <span class="glyphicon glyphicon-step-forward" ng-click="myAudioPlayer.next()"></span>
+        <span class="glyphicon glyphicon-step-forward" ng-click="mymediaPlayer.next()"></span>
     </a>
 </div>
+<audio media-player="audio" data-playlist="AudioList1">
+    <source src="{{audioList.Audio}}" type="audio/mp3">
+    <p>{{currentIndex}}</p>
+  </audio>
 
-<div class="now-playing">
+<!--<div class="now-playing">
+    <p>Now Playing: <img width="30" height="30" src="{{info.image}}" /></p>
+
     <p>{{audioList.Audio}} - {{currentIndex}}</p>
-</div>
+</div>-->
