@@ -4,13 +4,14 @@ var app = angular.module('bandApp',
  'ngAnimate', 
  'ngTouch', 
  'ui.bootstrap',
- /*
- 'jkuri.gallery',
- 'ngSanitize',
- 'com.2fdevs.videogular',
- 'com.2fdevs.videogular.plugins.controls',
- 'com.2fdevs.videogular.plugins.overlayplay',
- 'com.2fdevs.videogular.plugins.poster'*/
+ 
+ // 'jkuri.gallery',
+ //  'ngSanitize',
+ // 'com.2fdevs.videogular',
+ // 'com.2fdevs.videogular.plugins.controls',
+ // 'com.2fdevs.videogular.plugins.overlayplay',
+ // 'com.2fdevs.videogular.plugins.poster',
+ // 'com.2fdevs.videogular.plugins.buffering'
  ]);
 
 app.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
@@ -37,15 +38,15 @@ app.config(['$routeProvider','$locationProvider', function ($routeProvider, $loc
     /*.when('/music', {
         templateUrl: 'templates/music.html',
         controller: 'MusicController'
-    })
+    })*/
     .when('/video', {
         templateUrl: 'templates/video.html',
         controller: 'VideoController'
     })
-    .when('/photo', {
+    /*.when('/photo', {
         templateUrl: 'templates/photo.html',
         controller: 'PhotoController'
-    }) */   
+    }) */  
     .otherwise({
         redirectTo: '/'
     })

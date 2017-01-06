@@ -1,22 +1,144 @@
 <h3 ng-model="booking.Title">{{booking.Title}}</h3>
 <div class="booking-form container">
-  <form class="form-group" name="bookingform" id="bookingform" method="post" novalidate="novalidate" ng-submit="bookingform.$valid && handleFormSubmit(booking)">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label for="name">Name: </label>      
-        <input type="text" id="name" name="name" class="form-control" ng-model="booking.name" placeholder=" Full Name" required=""/>
+  <form name="bookingForm" ng-controller="FormController as form" method="post" ng-submit="bookingForm.$valid && handleFormSubmit(booking)" novalidate="" ng-hide="message">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="firstName">First Name
+            <span class="required">*</span>
+          </label>
+          <input ng-model="booking.firstName" type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required="" />
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">    
-      <div class="form-group">
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email" class="form-control" ng-model="booking.email" placeholder="Email" required="" />
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="lastName">Last Name
+            <span class="required">*</span>
+          </label>
+          <input ng-model="booking.lastName" type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required="" />
+        </div>
       </div>
-    </div>
-  </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="email">Email
+            <span class="required">*</span>
+          </label>
+          <input ng-model="booking.email" type="email" class="form-control" id="email" name="email" placeholder="Email" required="" />
+        </div>
+      </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="telephone">Phone Number</label>
+            <input ng-model="booking.telephone" type="text" class="form-control" id="telephone" name="telephone" placeholder="Telephone"/>
+          </div>
+        </div>
+      </div>
+<!-- /.row -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="startDate">required Date 
+              <span class="required"> *</span>
+            </label>
+              <p class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" is-open="opened1" min-date="minDate" max-date="" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-model="booking.startDate" name="startDate" id="startDate" ng-required="true" close-text="Close" ng-click="open($event)" />
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="open($event)">
+                  <i class="glyphicon glyphicon-calendar"></i>
+                  </button>
+                </span>
+              </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+        <div class="form-group">
+          <label for="endDate">End Date
+          <span class="required"> *</span>
+          </label>
+            <p class="input-group">
+            <input type="text" ng-disabled="!booking.startDate" class="form-control" datepicker-popup="{{format}}" ng-model="booking.endDate" name="endDate" id="endDate" is-open="opened2" min-date="booking.startDate" max-date="" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" ng-click="open2($event)" />
+            <span class="input-group-btn">
+              <button type="button" ng-disabled="!booking.startDate" class="btn btn-default" ng-click="open2($event)">
+                <i class="glyphicon glyphicon-calendar"></i>
+              </button>
+            </span>
+            </p>
+          </div>
+        </div>
+      </div>
+<!-- /.row -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="Events">Type of Events<span class="required"> *</span>
+            </label>
+            <select ng-model="booking.event" class="form-control" name="EventType" id="Event" required="">
+              <option value="3">Wedding</option>
+              <option value="4">Corporate</option>
+              <option value="5">Hotel Events</option>
+              <option value="6">Other Events</option>
+            </select>
+          </div>
+        </div>
+      </div>
+<!-- /.row -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Event Cost Options<span class="required"> *</span>
+            <em>(Select from below options)</em>
+            </label>
+          <ul>
+            <li ng-model="booking.eventType" ng-repeat="event in form.events" ng-click="form.selectEvent(event);" ng-class="{active:event.active}" class="eventType">{{event.name}} - {{event.description}}          
+            <span>{{event.price | currency}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="message">Message
+            <em>Contact address, specific arrangement requirements, any other information</em>
+            </label>
+            <textarea placeholder="Vacation address, specific dietery requirements, any other information" ng-model="booking.message" name="message" id="message" cols="30" rows="5"></textarea>
+          </div>
+        </div>
+      </div>
+<!-- /.row -->
+      <div class="form-group">
+        <label class="total" for="total">Total:
+          <span>{{booking.total | currency}}</span>
+          <em ng-show="booking.discount">(10% Discount of <span>{{booking.total | currency}} applied)</span>
+          </em>
+        </label>
+      </div>
+      <div class="form-group">
+        <button type="submit" ng-disabled="mealForm.$invalid" value="Submit" class="btn btn-default">Submit</button>
+        <input type="hidden" ng-model="booking.eventType" name="eventType" />
+        <input type="hidden" ng-model="booking.total" name="total" />
+        <input type="hidden" ng-model="booking.percentage" name="discount" />
+      </div>
+  <!-- /.panel -->
+  <!-- Success message -->
+      <div ng-show="message">
+        <p>Form submitted succesfully! Thank you for contacting us. We aim to respond to all enquiries within 24hrs. </p>
+      </div>
+    <!--Special cases-->
+      <div class="panel custom_form" ng-show="panel.isSelected(2)">
+        <h4>Special Requirements</h4>
+        <p>If you require a more bespoke booking please contact us.</p>
+      </div>
+  </form>
+
+
+
+        <!---<div class="col-sm-6">    
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" class="form-control" ng-model="booking.email" placeholder="Email" required="" />
+          </div>
+        </div>
+      </div>
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
@@ -65,4 +187,4 @@
   </form>  
 <div ng-show="message">
   <p>Form submitted succesfully! Thank you for contacting us. We aim to respond to all enquiries within 24hrs. </p>
-</div> 
+</div>-->

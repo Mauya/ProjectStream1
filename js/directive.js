@@ -6,7 +6,7 @@ app.directive('mediaPlayer', function(audioService) {
         scope: {},
         templateUrl: '/templates/music.html',
         link: function (scope, element, attrs) {
-        	scope.myAudioService = audioService;
+        	scope.myAudioService = audioservice;
       }
     };
 });*/
