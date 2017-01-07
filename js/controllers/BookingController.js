@@ -1,7 +1,30 @@
 angular.module("RouteControllers", []);
 app.controller("BookingController", ["$scope", function($scope){
+	$scope.booking={Title:"For Special Events Make a Booking Here!"};
 	var type = this;
-    type.events = ['wedding', 'Hotel functions', 'Corporate functions', 'Other events'];
+    type.events = [
+    	{'name':'wedding',
+		'price':'£3000/day',
+		'description':'Wedding music',
+		'active':true
+		},
+		{'name':'Hotel intertainment',
+		'price':'£3500/day',
+		'description':'Hotel Functions',
+		'active':false
+		},
+		{'name':'Corporate events',
+		'price':'£3000/day',
+		'description':'Corporate functions',
+		'active':false
+		},
+		{'name':'Others Events',
+		'price':'£3000/day',
+		'description':'Other functions',
+		'active':false
+		}
+     ];
+
       $scope.booking = {};
       // watch for a change in the totalDays
       $scope.$watchGroup(['booking.totalDays'], function(value) {
