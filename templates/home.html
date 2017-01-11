@@ -1,23 +1,12 @@
-<!-- <div style="height: 305px">
-  <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-      <img ng-src="{{slide.image}}" style="margin:auto;">
-      <div class="carousel-caption">
-        <h4>Slide {{slide.id}}</h4>
-        <p>{{slide.caption}}</p>
-      </div>
-    </div>
-  </div>
-</div> -->
 <h1 ng-model="title">{{title}}</h1>
-<div style="height: 100%px">
+<div style="height: 60%px">
   <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
     <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
       <img ng-src="{{slide.image}}" style="margin:auto;">
     </uib-slide>
       <div class="carousel-caption">
         <h4>Slide {{slide.id}}</h4>
-        <p>{{slide.caption}}</p>
       </div>
   </uib-carousel>
 </div>
+<p class="center">{{slide.caption}}</p>

@@ -1,4 +1,4 @@
-/*directive for placing the player on our page and allowing user interaction
+//directive for placing the player on our page and allowing user interaction
 angular.module('bandApp', [])
 app.directive('mediaPlayer', function(audioService) {
   return {
@@ -9,4 +9,4 @@ app.directive('mediaPlayer', function(audioService) {
         	scope.myAudioService = audioservice;
       }
     };
-});*/
+});

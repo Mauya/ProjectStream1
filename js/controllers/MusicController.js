@@ -1,4 +1,4 @@
-/*angular.module('RouteControllers', [])
+angular.module('RouteControllers', [])
 app.controller('MusicController', ['$scope', 'audiofactory', 'audioService', function($scope, audioService, audiofactory) {
 	$scope.musicTitle='The Crew Music' //can list as much of their music as they want.
     $scope.audio = audioService.audioPlayer;
@@ -6,4 +6,4 @@ app.controller('MusicController', ['$scope', 'audiofactory', 'audioService', fun
       $scope.audio.isPaused;
       $scope.audioList=Audio;
     }
-}]);*/
+}]);

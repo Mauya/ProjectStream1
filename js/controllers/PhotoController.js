@@ -1,4 +1,4 @@
-/*angular.module('RouteControllers', []);
+angular.module('RouteControllers', []);
 app.controller('PhotoController', function($scope, $document) {
     var self = this;
     self.images = [

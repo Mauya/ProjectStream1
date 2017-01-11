@@ -4,7 +4,7 @@ var app = angular.module('bandApp',
  'ngAnimate', 
  'ngTouch', 
  'ui.bootstrap',
- 
+ 'mediaPlayer',
  // 'jkuri.gallery',
  //  'ngSanitize',
  // 'com.2fdevs.videogular',
@@ -35,10 +35,10 @@ app.config(['$routeProvider','$locationProvider', function ($routeProvider, $loc
         templateUrl: 'templates/gallery.html',
         controller: 'GalleryController'
     })
-    /*.when('/music', {
+    .when('/music', {
         templateUrl: 'templates/music.html',
         controller: 'MusicController'
-    })*/
+    })
     .when('/video', {
         templateUrl: 'templates/video.html',
         controller: 'VideoController'
