@@ -3,15 +3,9 @@ var app = angular.module('bandApp',
  'RouteControllers', 
  'ngAnimate', 
  'ngTouch', 
+ 'picardy.fontawesome',
  'ui.bootstrap',
- 'mediaPlayer',
- // 'jkuri.gallery',
- //  'ngSanitize',
- // 'com.2fdevs.videogular',
- // 'com.2fdevs.videogular.plugins.controls',
- // 'com.2fdevs.videogular.plugins.overlayplay',
- // 'com.2fdevs.videogular.plugins.poster',
- // 'com.2fdevs.videogular.plugins.buffering'
+ 'mediaPlayer' 
  ]);
 
 app.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
@@ -43,10 +37,10 @@ app.config(['$routeProvider','$locationProvider', function ($routeProvider, $loc
         templateUrl: 'templates/video.html',
         controller: 'VideoController'
     })
-    /*.when('/photo', {
+    .when('/photo', {
         templateUrl: 'templates/photo.html',
         controller: 'PhotoController'
-    }) */  
+    }) 
     .otherwise({
         redirectTo: '/'
     })
