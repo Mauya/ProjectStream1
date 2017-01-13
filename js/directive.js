@@ -1,5 +1,5 @@
-//directive for placing the player on our page and allowing user interaction
-angular.module('bandApp', [])
+//directive for placing the player and video on our page and allowing user interaction
+angular.module('bandApp', []);
 app.directive('mediaPlayer', function(audioService) {
   return {
         restrict: 'E',
@@ -9,7 +9,7 @@ app.directive('mediaPlayer', function(audioService) {
         	scope.myAudioService = audioservice;
       }
     };
-})
+});
 
 app.directive('mediaPlayer',
 function () {
@@ -88,7 +88,7 @@ function () {
 				this.setVideoEndEvent = function (func) {
 					el.onended = func;
 				};
-			}
+			};
 			
 			var playerName = attr.mediaPlayer;
 			
@@ -96,5 +96,6 @@ function () {
 				scope[playerName] = new Player(elem);
 			}
 		}
-	}
+	};
 });
+//Explaination from Angularjs TutorialsPoint and codecademy (directives)
