@@ -3,7 +3,7 @@ var app = angular.module('bandApp',
  'RouteControllers', 
  'ngAnimate', 
  'ngTouch', 
- 'picardy.fontawesome',
+ // 'picardy.fontawesome',
  'ui.bootstrap',
  'mediaPlayer' 
  ]);

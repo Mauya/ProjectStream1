@@ -2,11 +2,14 @@
 <div style="height: 70%px">
   <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
     <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-      <img ng-src="{{slide.image}}" style="margin:auto;">
+      <img ng-src="{{slide.image}}" style="margin:auto; height:300; width:450;">
     </uib-slide>
       <div class="carousel-caption">
+      	<h3 class="center">{{slide.caption}}</h3>
         <h4>Slide {{slide.id}}</h4>
       </div>
-  </uib-carousel>
+  	</uib-carousel>
 </div>
-<p class="center">{{slide.caption}}</p>
+
+<h2 ng-model="title1">{{title1}}</h2><br />
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra risus eget massa varius, vitae sodales turpis condimentum. Mauris a mauris molestie, sagittis libero at, pellentesque dui. Nulla consequat finibus risus id congue. Pellentesque sed nisl at enim malesuada ultricies. Integer semper sit amet massa at suscipit. Vivamus elementum rutrum convallis. Aenean egestas ante lorem, non bibendum lacus sodales vel.</p>
