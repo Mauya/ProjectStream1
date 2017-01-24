@@ -96,8 +96,11 @@ h2 h3{
       box-shadow: 0px 1px 8px #666;
     }
 #imgList{
-    list-style-type: none;
+    list-style-image: none;
     display: inline-block;
+}
+.image-thumbnail{
+  float:left;
 }
 .playlist ul {
     list-style-type: none;
