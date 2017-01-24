@@ -27,7 +27,6 @@
   </style>
 </head>
 <body>
-  <main flex>
   <div class="main-wrapper"> 
    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
@@ -56,27 +55,28 @@
           </ul>
       </div>
     </nav>
-    <section class="mainSection">
-      <div class= "sidebarInfo" id="sidebar">
-        <nav class="col-sm-3">
-          <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="205">
-            <li class="active"><a href="#section1">Band Calendar</a></li>
-            <li><a href="#section2">Latest release</a></li>
-            <li><a href="#section3">Latest News</a></li>
-              <p>Sed fermentum nulla purus, vitae aliquam ex congue eu. Proin in commodo eros. Phasellus feugiat odio nec convallis hendrerit. Duis consequat purus dolor, nec dictum ipsum tempus sed. Nulla interdum sed velit a semper. Vivamus sed odio a justo pellentesque ullamcorper aliquam ut erat. Cras finibus ultrices dolor sollicitudin aliquet.</p>
-          </ul>
-        </nav>
+  </div>
+  <div class="page">
+    <div class="wrapper">
+      <div class= "sidebar">
+        <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="205">
+          <li class="active"><a href="#section1">Band Calendar</a></li>
+          <li><a href="#section2">Latest release</a></li>
+          <li><a href="#section3">Latest News</a></li>
+            <p>Sed fermentum nulla purus, vitae aliquam ex congue eu. Proin in commodo eros. Phasellus feugiat odio nec convallis hendrerit. Duis consequat purus dolor, nec dictum ipsum tempus sed. Nulla interdum sed velit a semper. Vivamus sed odio a justo pellentesque ullamcorper aliquam ut erat. Cras finibus ultrices dolor sollicitudin aliquet.</p>
+        </ul>
       </div>
-
-      <div class="mainContent" id="main">
-        <div class="col-sm-9">
-          <div class="page-header"></div>
-          <div ng-view></div>
+      <div class="content-wrapper">
+        <div class = "content">
+          <div class ="content-inner">
+            <div ng-view>
+              
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
-</main>
 
   <footer class="container text center">
     <div class="theFooter">

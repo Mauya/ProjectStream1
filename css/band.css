@@ -1,61 +1,56 @@
 *{
-    margin: 0px;
-    padding:0px;
+  margin: 0px;
+  padding:0px;
 }
 body{
-    width:100%;
-    display:-webkit-box;
-    -webkit-box-pack:center;
+  width:100%;
+  display:-webkit-box;
+  -webkit-box-pack:center;
 }
 h1 {
   color: #ffffff;
   text-align: center;
   margin: 15px;
 }
-main{
-  overflow-y: auto;
-}
 .main-wrapper{
-    max-width:1000px;
-    margin:20px 0px;
-    display:-webkit-box;
-    -webkit-box-orient:vertical;
-    -webkit-box-flex:1;
+  max-width:1000px;
+  margin:20px 0px;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-box-flex:1;
 }
 .navbar{
-    margin-bottom: 10px;
-    border: 0;
-    border-radius: 0;
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: 0;
 }
-.mainSection{
-    display:-webkit-box;
-    -webkit-box-orient:horizontal;
+.page{
+  margin:20px 0;
 }
-.sidebarInfo{    
-    padding: 30px;    
-    background-color: #D8D8D8;
-    width:220px;
-    margin:20px 0px;
-    height:100%;
+.wrapper{    
+  max-width:1160px;
+  margin:0 auto;
+  position:relative;
+  padding:0 20px;
+  min-height:600px;
 }
-.mainContent {
-    -webkit-box-flex: 1;
-    margin:20px;
-    background-color: lavender;
-    padding:20px;
+.Content-wrapper {
+  float:right;
+  width:100%;
 }
-#main {
-    position: relative;
-    height: 100%;
-    margin:20px;
-    padding: 20px;
+.content {
+  margin-right: 320px;
+  clear:both;
+  overflow:auto;
+  min-height:600px;
 }
 #sidebar {
-    position: relative;
-    height: 100%;
-    overflow:hidden;
-    margin:20px 0px;
-    padding:20px;
+  position: relative;
+  width:320px;
+  min-height:600px;
+  overflow: hidden;
+  margin-left:-320px;
+  float:right;
 }
  footer {
     background-color: #000;
