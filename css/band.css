@@ -60,7 +60,6 @@ main{
 .content-wrapper {
   position: relative;
   float:right;
-  height: 100%;
 }
 .content{
   margin-left: 320px;
@@ -69,26 +68,27 @@ main{
   background: #1abc9c;
   min-height: 600px;
 }
- footer {
+ footer {  
+    position:fixed;
     background-color: #2d2d30;
     color: #f5f5f5;
     text-align: center;
     padding:20px;
     border-top: 5px solid black;
-}
+  }
 .affix~.container-fluid{
   position:relative;
   top:50px;
-}
+  }
 
 h2 {
   margin-bottom: 15px;
-  float: left;
-  padding-left: 10px;
-}
+  text-align: center;
+  padding: 10px;
+  }
 
  uib-slide img {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-left: 50px;
   cursor: pointer;
   display: block;
@@ -108,9 +108,21 @@ h2 {
       opacity: .74;
       box-shadow: 0px 1px 8px #666;
     }
-#imgList{
+.img-wrapper{
     list-style-type: none;
-    display: inline-block;
+    display: block;
+}
+.img-wrapper ul li{
+  display:inline-block;
+}
+.clearfix{
+  overflow:auto;
+}
+.clearfix img{
+  float:left;
+}
+.clearfix p{
+  float:right;
 }
 .playlist ul {
     list-style-type: none;
