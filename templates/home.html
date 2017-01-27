@@ -1,8 +1,8 @@
-<h1 ng-model="title">{{title}}</h1>
+<h2 ng-model="title">{{title}}</h2>
 <div style="height: 70%px">
   <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
     <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-      <img ng-src="{{slide.image}}" style="margin:auto; height:300; width:450;">
+      <img ng-src="{{slide.image}}" style="margin:auto; height:350px; width:700px;">
     </uib-slide>
       <div class="carousel-caption">
       	<h3 class="center">{{slide.caption}}</h3>

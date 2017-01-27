@@ -1,11 +1,12 @@
 <h3 ng-model="memberTitle">{{memberTitle}}</h3>
-	<div class="col-sm-7 col-sm-offset-1">
+	<div class="col-sm-6 col-sm-offset-1">
 		<div id="imgWrapper">
-			<ul id=imgList>
+			<ul  style="list-style-type:none">
 				<li ng-repeat="member in members">
-					<img class="img-thumbnail" ng-src="{{member.image}}" alt="member.name"/>			
-					<h4 class="imgTitle"><strong>{{member.name}}</strong></h4><br />
-		    		<p class="desc">{{member.description}}</p>
+					<p> 
+					<img class="img-thumbnail" ng-src="{{member.image}}" alt="member.name">
+					<h4 class="imgTitle"><strong>{{member.name}}</strong></h4><br/>{{member.description}}
+					</p>
 		    	</li>				
 			</ul>
 		</div>
