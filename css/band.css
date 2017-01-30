@@ -28,11 +28,13 @@ main{
     border-radius: 0;
 }
 .page-wrapper{
-    display:-webkit-box;
-    -webkit-box-flex:1;
-    -webkit-box-orient:horizontal;
-    margin:20px;
-    padding:20px;
+  display:-webkit-box;
+  -webkit-box-flex:1;
+  -webkit-box-orient:horizontal;
+  margin:20px;
+  padding:20px;
+  height:600px;
+
 }
 .sidebar-wrapper{ 
   position:fixed;   
@@ -60,6 +62,7 @@ main{
 .content-wrapper {
   position: relative;
   float:right;
+  min-height: 600px;
 }
 .content{
   margin-left: 320px;
@@ -75,6 +78,7 @@ main{
     text-align: center;
     padding:20px;
     border-top: 5px solid black;
+    height:80px;
   }
 .affix~.container-fluid{
   position:relative;
