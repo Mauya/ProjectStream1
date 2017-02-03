@@ -112,22 +112,6 @@ h2 {
       opacity: .74;
       box-shadow: 0px 1px 8px #666;
     }
-.img-wrapper{
-    list-style-type: none;
-    display: block;
-}
-.img-wrapper ul li{
-  display:inline-block;
-}
-.clearfix{
-  overflow:auto;
-}
-.clearfix img{
-  float:left;
-}
-.clearfix p{
-  float:right;
-}
 .playlist ul {
     list-style-type: none;
 }

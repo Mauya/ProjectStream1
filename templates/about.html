@@ -1,15 +1,38 @@
 <h3 ng-model="memberTitle">{{memberTitle}}</h3>
-	<div class="img-wrapper">
-		<ul  style="list-style-type:none">
-			<li ng-repeat="member in members">
-				<div class="clearfix"> 
+<div class="row">
+  <div class="col-sm-8">
+    <div class="thumbnail">
+    	<ul style="list-style-type:none; display: inline;">
+    		<li ng-repeat="member in members">				 
 				<img class="img-thumbnail" ng-src="{{member.image}}" alt="member.name">
 				<h4 class="imgTitle"><strong>{{member.name}}</strong></h4>
-				<p>{{member.description}}</p>
+	        	<div class="caption">
+	          		<p>{{member.description}}</p>
+	        	</div>
+	        </li>	
+    	</ul>
+  	</div>
+  </div>
+
+
+
+
+	<!-- <div class="img-wrapper">		
+		<ul  style="list-style-type:none">
+			<div class ="row">
+				<div class="col-md-4">
+					<div class="clearfix">
+						<li ng-repeat="member in members">				 
+						<img class="img-thumbnail" ng-src="{{member.image}}" alt="member.name">
+						<h4 class="imgTitle"><strong>{{member.name}}</strong></h4>
+						<p>{{member.description}}</p>
+						</li>	
+					</div>
 				</div>
-	    	</li>				
+			</div>
 		</ul>
-	</div>
+	</div> -->
+
 
 <!--<div ng-controller="AboutController">	
 	<h3 ng-model="memberTitle">{{memberTitle}}</h3>
