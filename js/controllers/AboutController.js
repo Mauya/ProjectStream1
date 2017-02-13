@@ -29,12 +29,6 @@ app.controller('AboutController', ['$scope', '$route', function($scope, $route){
       "name":"member Four",
       "image":"images/member4.jpg",
       "description":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
-    },
-
-    {
-      "name":"member Five",
-      "image":"images/member5.jpg",
-      "description":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
-    }  
+    }
     ];
   }]);

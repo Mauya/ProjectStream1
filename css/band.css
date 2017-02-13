@@ -99,7 +99,7 @@ h2 {
     opacity: .74;
     box-shadow: 0px 1px 8px #666;
   }
-  .img1{
+  .img-thumbnail{
     float:left;
   }
   .clearfix::after{
