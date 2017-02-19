@@ -40,8 +40,9 @@ nav, aside, section, footer{
     text-decoration: none;
     color:#eee;
   }
-.page_wrapper{
-  display:-webkit-box;
+.flex_wrapper{
+  display:-webkit-flex;
+  display:flex;
   /*-webkit-box-flex:1;*/
   -webkit-box-orient:horizontal;
  }

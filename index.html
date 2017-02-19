@@ -56,32 +56,36 @@
     </nav>
 
       <!-- sidebar -->
-      <div class="page_wrapper">
-        <div class="sidebar">
-          <div flex="30" layout="column" class="boxWithHeight" layout-padding>
-            <section flex="30" class="active"><a href="#section1">Band Calendar</a></section>
-            <section flex ="30"><a href="#section2">Latest release</a></section>
-            <section flex="30"><a href="#section3">Latest News</a>
+      <div class="flex_wrapper" layout="row">
+      <aside class="sidebar">
+        <div class="col-sm-3 col-md-6 col-lg-4">
+          <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="205">
+            <li flex="30" class="active"><a href="#section1">Band Calendar</a></li>
+            <li><a href="#section2">Latest release</a></li>
+            <li><a href="#section3">Latest News</a></li>
               <p>Sed fermentum nulla purus, vitae aliquam ex congue eu. Proin in commodo eros. Phasellus feugiat odio nec convallis hendrerit. Duis consequat purus dolor, nec dictum ipsum tempus sed. Nulla interdum sed velit a semper. Vivamus sed odio a justo pellentesque ullamcorper aliquam ut erat. Cras finibus ultrices dolor sollicitudin aliquet.</p>
-            </section>
-          </div>
+          </ul>
         </div>
+      </aside>
         <!-- end sidebar -->
         <!-- page content -->
-      <div class="content">
-        <div flex="70" layout="column" class="boxWithHeight" layout-padding>
-          <div ng-view></div>
+      <section class="main_section">
+        <div class="col-sm-9 col-md-6 col-lg-8">
+          <div class="content">
+            <div ng-view></div>
               
+            </div><br />
         </div>
+      </section>
+      </div>
+        <!--end content-->
+      
+    <div class="container-fluid">
+      <div class="footer text-center">      
+        <strong>Copyright ©2016<span id="Owner">Swing crew</span> by SMK</strong>
       </div>
     </div>
-        <!--end content-->
-    
-      <div class="footer text-center"> 
-        <div flex="100" layout="column" class="boxWithHeight" layout-padding>     
-        Copyright ©2016<span id="Owner">Swing crew</span> by SMK
-        </div>
-      </div>
+  </div>
 
 
   <script src='js/app.js'></script>
@@ -97,4 +101,3 @@
   <script src='js/service.js'></script>
 </body>
 </html>
-

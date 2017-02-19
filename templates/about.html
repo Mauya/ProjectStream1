@@ -2,7 +2,7 @@
 <div class="clearfix">
   <div class="memberBio">
   	<ul style="list-style-type: none; display:inline-block;">
-		<li ng-repeat="member in members"> 
+		<li ng-repeat="member in members row in grid" flex layout="row"> 
 			<img class="img-thumbnail" ng-src="{{member.image}}" alt="member.name">
 			<h4 class="imgTitle"><strong>{{member.name}}</strong></h4>
 			<div class="column-content">
