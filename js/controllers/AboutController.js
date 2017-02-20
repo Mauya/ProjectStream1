@@ -4,7 +4,6 @@ app.controller('AboutController', ['$scope', '$route', function($scope, $route){
     vm.reloadData=function(){
       $route.reload();
     }
-    
     $scope.memberTitle= "The Biography of Band Members";
     $scope.members=[
     {
@@ -29,7 +28,7 @@ app.controller('AboutController', ['$scope', '$route', function($scope, $route){
       "name":"member Four",
       "image":"images/member4.jpg",
       "description":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
-    }
+    },
 
     {
      "name":"member Five",
@@ -37,12 +36,6 @@ app.controller('AboutController', ['$scope', '$route', function($scope, $route){
       "description":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate." 
     }
   ];
+}]);
 
-    $scope.currentImage = _.first($scope.images);  
-     
-    $scope.setCurrentImage = function(image) {
-
-    $scope.currentImage = image;
-  };
-
-  }];
+  
