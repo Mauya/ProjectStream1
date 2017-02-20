@@ -1,8 +1,8 @@
-<h3 class="header" ng-model="memberTitle">{{memberTitle}}</h3>
-<div class="clearfix">
+<!-- <h3 class="header" ng-model="memberTitle">{{memberTitle}}</h3> 
+  <div class="clearfix">
   <div class="memberBio">
   	<ul style="list-style-type: none; display:inline-block;">
-		<li ng-repeat="member in members row in grid" flex layout="row"> 
+		<li ng-repeat="member in members"> 
 			<img class="img-thumbnail" ng-src="{{member.image}}" alt="member.name">
 			<h4 class="imgTitle"><strong>{{member.name}}</strong></h4>
 			<div class="column-content">
@@ -11,8 +11,27 @@
      	</li>
      </ul>       	
   </div>
-</div>
+  </div> -->
 
+
+<h3 ng-model="memberTitle">{{memberTitle}}</h3>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="albumImage">
+        <img ng-src="{{currentmember.image}}" alt="{{currentmember.name}}"/>
+      </div>  
+     <div class="col-md-3">
+      <div class="wrapper">
+        <ul class="list">
+          <li ng-repeat="image in members" ng-click="setCurrentImage(image)">
+            <img ng-src="{{member.image}}" alt="{{member.name}}"/>
+            <h3>{{currentmember.name}}</h3>
+  			<p>{{member.description}}</p>
+          </li>
+        </ul><!-- End of List -->
+      </div><!-- End of Wrapper -->
+    </div><!-- End of Column -->
+  </div><!-- End of Row -->
 
 
 
